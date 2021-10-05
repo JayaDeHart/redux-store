@@ -1,0 +1,2 @@
+.app{height:100vh;display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr auto;grid-template-areas:"header" "main" "footer"}.header{grid-area:header}.main{grid-area:main;overflow:auto;padding-top:50px}.footer{grid-area:footer}.product{margin-top:10px}
+/*# sourceMappingURL=main.e94622d9.chunk.css.map */
