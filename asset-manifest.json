@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/redux-storefront/static/css/main.e94622d9.chunk.css",
-    "main.js": "/redux-storefront/static/js/main.1fd7ffaf.chunk.js",
-    "main.js.map": "/redux-storefront/static/js/main.1fd7ffaf.chunk.js.map",
-    "runtime-main.js": "/redux-storefront/static/js/runtime-main.5228f621.js",
-    "runtime-main.js.map": "/redux-storefront/static/js/runtime-main.5228f621.js.map",
-    "static/js/2.ba5c0d38.chunk.js": "/redux-storefront/static/js/2.ba5c0d38.chunk.js",
-    "static/js/2.ba5c0d38.chunk.js.map": "/redux-storefront/static/js/2.ba5c0d38.chunk.js.map",
-    "index.html": "/redux-storefront/index.html",
-    "static/css/main.e94622d9.chunk.css.map": "/redux-storefront/static/css/main.e94622d9.chunk.css.map",
-    "static/js/2.ba5c0d38.chunk.js.LICENSE.txt": "/redux-storefront/static/js/2.ba5c0d38.chunk.js.LICENSE.txt"
+    "main.css": "/redux-store/static/css/main.e94622d9.chunk.css",
+    "main.js": "/redux-store/static/js/main.1fd7ffaf.chunk.js",
+    "main.js.map": "/redux-store/static/js/main.1fd7ffaf.chunk.js.map",
+    "runtime-main.js": "/redux-store/static/js/runtime-main.3c6f0887.js",
+    "runtime-main.js.map": "/redux-store/static/js/runtime-main.3c6f0887.js.map",
+    "static/js/2.ba5c0d38.chunk.js": "/redux-store/static/js/2.ba5c0d38.chunk.js",
+    "static/js/2.ba5c0d38.chunk.js.map": "/redux-store/static/js/2.ba5c0d38.chunk.js.map",
+    "index.html": "/redux-store/index.html",
+    "static/css/main.e94622d9.chunk.css.map": "/redux-store/static/css/main.e94622d9.chunk.css.map",
+    "static/js/2.ba5c0d38.chunk.js.LICENSE.txt": "/redux-store/static/js/2.ba5c0d38.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.5228f621.js",
+    "static/js/runtime-main.3c6f0887.js",
     "static/js/2.ba5c0d38.chunk.js",
     "static/css/main.e94622d9.chunk.css",
     "static/js/main.1fd7ffaf.chunk.js"
