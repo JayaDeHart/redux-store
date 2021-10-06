@@ -6,7 +6,6 @@ import { Button, ButtonGroup } from '@mui/material';
 import Products from './Products';
 
 function Categories(props) {
-  console.log(props.categories);
   return (
     <div className="main">
       <ButtonGroup variant="text" aria-label="text button group">

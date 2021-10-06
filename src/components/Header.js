@@ -1,9 +1,19 @@
-import React from 'react';
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import React, { useState, useRef } from 'react';
+import { AppBar, Toolbar, Typography, Popper, Button } from '@mui/material';
+import Cart from './Cart';
 import ActiveCategory from './ActiveCategory';
 import '../app.scss';
 
 function Header() {
+  const [anchor, setAnchor] = useState(null);
+
+  const [open, setOpen] = useState(false);
+
+  function togglePopper(e) {
+    setAnchor(e.currentTarget);
+    setOpen(!open);
+  }
+
   return (
     <AppBar className="header">
       <Toolbar variant="dense">
@@ -11,6 +21,12 @@ function Header() {
           Shop Till You Drop
         </Typography>
         <ActiveCategory />
+        <Button variant="contained" color="secondary" onClick={togglePopper}>
+          Cart
+        </Button>
+        <Popper open={open} anchorEl={anchor} placement="bottom">
+          <Cart />
+        </Popper>
       </Toolbar>
     </AppBar>
   );

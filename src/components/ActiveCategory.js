@@ -10,7 +10,7 @@ function ActiveCategory(props) {
       sx={{ flexGrow: 1 }}
       style={{ paddingLeft: '10px' }}
     >
-      {props.activeCategory}
+      | Shopping: {props.activeCategory}
     </Typography>
   );
 }

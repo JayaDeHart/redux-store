@@ -79,15 +79,14 @@ let initialState = {
 
 export default (state = initialState, action) => {
   let { type, payload } = action;
-  console.log(payload);
 
   switch (type) {
     case 'CHANGE':
       let filtered = state.products.filter(
         (product) => product.category === payload
       );
-      console.log(filtered);
       return { ...state, displayProducts: filtered };
+
     default:
       return state;
   }
