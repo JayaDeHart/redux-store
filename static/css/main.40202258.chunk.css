@@ -1,0 +1,2 @@
+.app{height:100vh;display:grid;grid-template-columns:1fr;grid-template-rows:auto 1fr auto;grid-template-areas:"header" "main" "footer"}.header{grid-area:header}.main{grid-area:main;overflow:auto;padding-top:50px}.footer{grid-area:footer}.cart-button{color:#fff;z-index:100}.product{margin-top:10px}.cart{padding:10px;margin-top:20px}.cart-item{display:flex;align-items:center;font-size:1.2rem}.cart-item>button{display:inline}
+/*# sourceMappingURL=main.40202258.chunk.css.map */
