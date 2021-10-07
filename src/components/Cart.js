@@ -10,7 +10,7 @@ export const Cart = (props) => {
     <Card className="cart">
       {props.cart.length < 1 && <div>Your cart is empty!</div>}
       {props.cart.map((product) => (
-        <div className="cart-item">
+        <div key={product.key} className="cart-item">
           {product.name}
           <IconButton
             size="small"
