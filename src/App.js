@@ -1,9 +1,16 @@
+import { useEffect } from 'react';
+import { connect } from 'react-redux';
+import { getInitial } from './redux/products';
+
 import './app.scss';
 import Categories from './components/Categories.js';
 import Footer from './components/Footer.js';
 import Header from './components/Header.js';
 
-function App() {
+function App(props) {
+  useEffect(() => {
+    props.getInitial();
+  }, []);
   return (
     <div className="app">
       <Header />
@@ -12,5 +19,6 @@ function App() {
     </div>
   );
 }
+const mapDispatchToProps = { getInitial };
 
-export default App;
+export default connect(null, mapDispatchToProps)(App);

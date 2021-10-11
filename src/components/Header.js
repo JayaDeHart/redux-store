@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { AppBar, Toolbar, Typography, Popper, Button } from '@mui/material';
 import Cart from './Cart';
 import ActiveCategory from './ActiveCategory';

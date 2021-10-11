@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 let initialState = {
   products: [
     {
@@ -5,7 +7,7 @@ let initialState = {
       description: 'The revolutionary product envisioned by Steve Jobs',
       price: 100,
       category: 'electronics',
-      stock: 10,
+      inStock: 10,
       display: true,
     },
     {
@@ -13,7 +15,7 @@ let initialState = {
       description: 'Count your steps',
       price: 200,
       category: 'electronics',
-      stock: 10,
+      inStock: 10,
       display: true,
     },
     {
@@ -21,7 +23,7 @@ let initialState = {
       description: 'Designed by Kanye West',
       price: 400,
       category: 'clothes',
-      stock: 10,
+      inStock: 10,
       display: true,
     },
     {
@@ -29,7 +31,7 @@ let initialState = {
       description: 'Pretty fly',
       price: 150,
       category: 'clothes',
-      stock: 10,
+      inStock: 10,
       display: true,
     },
     {
@@ -37,7 +39,7 @@ let initialState = {
       description: 'Print a custom picture on this canvas sheet',
       price: 15,
       category: 'prints',
-      stock: 10,
+      inStock: 10,
       display: true,
     },
     {
@@ -45,7 +47,7 @@ let initialState = {
       description: 'Print a custom picture on this glossy photo paper',
       price: 20,
       category: 'prints',
-      stock: 10,
+      inStock: 10,
       display: true,
     },
   ],
@@ -68,7 +70,7 @@ export default (state = initialState, action) => {
     case 'ADD_CART':
       let subtracted = state.products.map((product) => {
         if (product.name == payload.name) {
-          product.stock -= 1;
+          product.inStock -= 1;
           return product;
         } else {
           return product;
@@ -78,14 +80,36 @@ export default (state = initialState, action) => {
     case 'REMOVE_CART':
       let added = state.products.map((product) => {
         if (product.name == payload.name) {
-          product.stock += 1;
+          product.inStock += 1;
           return product;
         } else {
           return product;
         }
       });
       return { ...state, products: added };
+    case 'SET_INITAL':
+      console.log(payload);
     default:
       return state;
   }
+};
+
+const setInitial = (data) => {
+  return {
+    type: 'SET_INITIAL',
+    payload: data,
+  };
+};
+
+export const getInitial = () => {
+  return (dispatch) => {
+    axios
+      .get('https://api-js401.herokuapp.com/api/v1/products')
+      .then((res) => {
+        dispatch(setInitial(res));
+      })
+      .catch((err) => {
+        console.log('error!');
+      });
+  };
 };

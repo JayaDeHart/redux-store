@@ -39,7 +39,9 @@ export const Products = (props) => {
                   Add to cart
                 </Button>
                 <Typography variant="body2">${product.price}.00 </Typography>
-                <Typography variant="body2">Stock: {product.stock} </Typography>
+                <Typography variant="body2">
+                  Stock: {product.inStock}
+                </Typography>
               </CardActions>
             </Card>
           );
